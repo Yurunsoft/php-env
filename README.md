@@ -14,4 +14,6 @@
 * 一键配置国内镜像（阿里云、腾讯云、华为云、cnpkg）
 * 一键安装 Composer 多线程加速下载包
 
+快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/composer.sh && bash composer.sh`
+
 > 更多脚本持续更新中……
