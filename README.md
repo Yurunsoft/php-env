@@ -1,37 +1,17 @@
 # PHP 环境安装工具
 
-#### 介绍
+## 介绍
+
 宇润日常开发中，整理的一些常见的 PHP 环境相关的一键安装工具脚本。Composer 一键安装脚本。
 
-#### 软件架构
-软件架构说明
+宇润 php 全家桶交流群：17916227 [![点击加群](https://pub.idqqimg.com/wpa/images/group.png "点击加群")](https://jq.qq.com/?_wv=1027&k=5wXf4Zq)
 
+## 文件说明
 
-#### 安装教程
+### `composer.sh`
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+* 一键安装 Composer
+* 一键配置国内镜像（阿里云、腾讯云、华为云、cnpkg）
+* 一键安装 Composer 多线程加速下载包
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+> 更多脚本持续更新中……
