@@ -29,7 +29,7 @@ if [[ $install = "y" ]] || [[ $install = "" ]]; then
         curl -o composer.phar $downloadUrl
     else
         echo -e "\033[31mError: 没有找到 wget / curl\033[0m"
-        exit
+        exit 1
     fi
 
     echo -e "\033[32m安装中...\033[0m"
