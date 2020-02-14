@@ -16,4 +16,20 @@
 
 快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/composer.sh && bash composer.sh`
 
+### `apt-php.sh`
+
+一键使用 `apt` 工具安装 `php`，适合 Ubuntu、Debian 等使用 apt 的 Linux 系统。
+
+支持安装：`PHP 7.0/7.1/7.2/7.3/7.4`。
+
+自动安装了一些非常常用的 PHP 扩展。
+
+快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/apt-php.sh && bash apt-php.sh`
+
+### `php-redis.sh`
+
+一键安装 `Redis` 扩展，自动启用 `igbinary`，支持序列化。
+
+快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/php-redis.sh && bash php-redis.sh`
+
 > 更多脚本持续更新中……
