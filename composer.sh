@@ -20,7 +20,7 @@ if [[ $install = "y" ]] || [[ $install = "" ]]; then
     fi
 
     # 下载
-    downloadUrl="https://getcomposer.org/composer.phar"
+    downloadUrl="https://getcomposer.org/composer-stable.phar"
     if [ "" != "$(which wget)" ]; then
         echo -e "\033[32m正在使用 wget 下载 Composer...\033[0m"
         wget -O composer.phar $downloadUrl
