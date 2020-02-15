@@ -38,7 +38,7 @@ fi
 
 # 第三方源
 echo -e "\033[32m安装第三方源...\033[0m"
-add-apt-repository ppa:ondrej/php -y -u
+add-apt-repository "https://launchpad.proxy.ustclug.org/ondrej/php/ubuntu" -y -u
 
 # 安装php
 # 基本很全了，如果不够，自己再装
