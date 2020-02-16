@@ -7,10 +7,10 @@ if [ "" == "$(php -m | grep igbinary)" ]; then
     # 安装 igbinary
     version="3.1.2"
     downloadUrl="https://github.com/igbinary/igbinary/archive/$version.tar.gz"
-    if !(type wget >/dev/null 2>&1); then
+    if (type wget >/dev/null 2>&1); then
         echo -e "\033[32m正在使用 wget 下载 igbinary...\033[0m"
         wget -O igbinary.tar.gz $downloadUrl
-    if !(type curl >/dev/null 2>&1); then
+    elif (type curl >/dev/null 2>&1); then
         echo -e "\033[32m正在使用 curl 下载 igbinary...\033[0m"
         curl -o igbinary.tar.gz $downloadUrl
     else
@@ -41,10 +41,10 @@ fi
 version="5.1.1"
 downloadUrl="https://github.com/phpredis/phpredis/archive/$version.tar.gz"
 
-if !(type wget >/dev/null 2>&1); then
+if (type wget >/dev/null 2>&1); then
     echo -e "\033[32m正在使用 wget 下载 redis...\033[0m"
     wget -O redis.tar.gz $downloadUrl
-if !(type curl >/dev/null 2>&1); then
+elif (type curl >/dev/null 2>&1); then
     echo -e "\033[32m正在使用 curl 下载 redis...\033[0m"
     curl -o redis.tar.gz $downloadUrl
 else

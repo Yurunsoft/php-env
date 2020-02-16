@@ -21,10 +21,10 @@ if [[ $install = "y" ]] || [[ $install = "" ]]; then
 
     # 下载
     downloadUrl="https://getcomposer.org/composer-stable.phar"
-    if !(type wget >/dev/null 2>&1); then
+    if (type wget >/dev/null 2>&1); then
         echo -e "\033[32m正在使用 wget 下载 Composer...\033[0m"
         wget -O composer.phar $downloadUrl
-    if !(type curl >/dev/null 2>&1); then
+    elif (type curl >/dev/null 2>&1); then
         echo -e "\033[32m正在使用 curl 下载 Composer...\033[0m"
         curl -o composer.phar $downloadUrl
     else
