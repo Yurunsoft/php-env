@@ -19,6 +19,7 @@ if [ "" == "$(php -m | grep igbinary)" ]; then
     fi
 
     tar -xzf igbinary.tar.gz
+    rm igbinary.tar.gz
 
     cd igbinary-$version
 
@@ -52,6 +53,7 @@ else
 fi
 
 tar -xzf redis.tar.gz
+rm redis.tar.gz
 
 cd phpredis-$version
 
