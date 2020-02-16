@@ -29,7 +29,7 @@ else
     exit 1
 fi
 
-if [ "" == "$(which add-apt-repository)" ]; then
+if !(type add-apt-repository2 >/dev/null 2>&1); then
     # 安装 add-apt-repository
     echo -e "\033[32m安装 add-apt-repository...\033[0m"
     apt update
