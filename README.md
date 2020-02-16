@@ -8,14 +8,6 @@
 
 ## 文件说明
 
-### `composer.sh`
-
-* 一键安装 Composer
-* 一键配置国内镜像（阿里云、腾讯云、华为云、cnpkg）
-* 一键安装 Composer 多线程加速下载包
-
-快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/composer.sh && bash composer.sh`
-
 ### `apt-php.sh`
 
 一键使用 `apt` 工具安装 `php`，适合 Ubuntu、Debian 等使用 apt 的 Linux 系统。
@@ -31,5 +23,13 @@
 一键安装 `Redis` 扩展，自动启用 `igbinary`，支持序列化。
 
 快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/php-redis.sh && bash php-redis.sh`
+
+### `composer.sh`
+
+* 一键安装 Composer
+* 一键配置国内镜像（阿里云、腾讯云、华为云、cnpkg）
+* 一键安装 Composer 多线程加速下载包
+
+快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/composer.sh && bash composer.sh`
 
 > 更多脚本持续更新中……
