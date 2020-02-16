@@ -18,6 +18,12 @@
 
 快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/apt-php.sh && bash apt-php.sh`
 
+### `switch.sh`
+
+切换系统内已安装的 PHP 版本
+
+快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/switch.sh && bash switch.sh`
+
 ### `php-redis.sh`
 
 一键安装 `Redis` 扩展，自动启用 `igbinary`，支持序列化。
