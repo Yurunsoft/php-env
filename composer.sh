@@ -39,6 +39,10 @@ if [[ $install = "y" ]] || [[ $install = "" ]]; then
 
     # 移动到可执行目录
     mv -f composer.phar /usr/local/bin/composer
+    # 兼容部分系统 /usr/local/bin 没在 PATH
+    if !(composer -V >/dev/null 2>&1); then
+        mv -f /usr/local/bin/composer /usr/bin/composer
+    fi
 fi
 
 # 测试
