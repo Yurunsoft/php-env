@@ -38,7 +38,13 @@ fi
 
 # 第三方源
 echo -e "\033[32m安装第三方源...\033[0m"
-add-apt-repository "https://launchpad.proxy.ustclug.org/ondrej/php/ubuntu" -y -u
+add-apt-repository "https://launchpad.proxy.ustclug.org/ondrej/php/ubuntu" -y -u > /dev/null 2> /tmp/apt_add_key.txt    
+key=`cat /tmp/apt_add_key.txt | awk -F ":" '{print $6}'  | awk '{print $2}'`
+if [ "" != $key ]; then
+    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv $key
+    apt update
+fi
+rm /tmp/apt_add_key.txt
 
 # 安装php
 # 基本很全了，如果不够，自己再装
