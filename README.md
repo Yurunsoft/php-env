@@ -18,6 +18,16 @@
 
 快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/apt-php.sh && bash apt-php.sh`
 
+### `yum-php.sh`
+
+一键使用 `yum` 工具安装 `php`，适合 CentOS 等 RedHat 系，使用 yum 的 Linux 系统。
+
+支持安装：`PHP 7.0/7.1/7.2/7.3/7.4`。
+
+自动安装了一些非常常用的 PHP 扩展。
+
+快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/yum-php.sh && bash yum-php.sh`
+
 ### `switch.sh`
 
 切换系统内已安装的 PHP 版本
