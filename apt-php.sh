@@ -43,4 +43,4 @@ add-apt-repository "https://launchpad.proxy.ustclug.org/ondrej/php/ubuntu" -y -u
 # 安装php
 # 基本很全了，如果不够，自己再装
 echo -e "\033[32m安装 PHP...\033[0m"
-apt install -y $cmdPHPVersion-fpm $cmdPHPVersion-cli $cmdPHPVersion-bcmath $cmdPHPVersion-bz2 $cmdPHPVersion-curl $cmdPHPVersion-dev $cmdPHPVersion-gd $cmdPHPVersion-mbstring $cmdPHPVersion-mysql $cmdPHPVersion-opcache $cmdPHPVersion-sqlite3 $cmdPHPVersion-xml $cmdPHPVersion-zip
+apt install -y --allow-unauthenticated $cmdPHPVersion-fpm $cmdPHPVersion-cli $cmdPHPVersion-bcmath $cmdPHPVersion-bz2 $cmdPHPVersion-curl $cmdPHPVersion-dev $cmdPHPVersion-gd $cmdPHPVersion-mbstring $cmdPHPVersion-mysql $cmdPHPVersion-opcache $cmdPHPVersion-sqlite3 $cmdPHPVersion-xml $cmdPHPVersion-zip
