@@ -3,6 +3,12 @@
 
 phpIniPath=$(php -r "echo php_ini_loaded_file();")
 
+phpdPath=$(php -r "\$list = explode(',', php_ini_scanned_files());if(isset(\$list[0])){echo \$list[0];}")
+
+if [ "" != "$phpdPath" ]; then
+    phpdPath=$(dirname $phpdPath)
+fi
+
 if [ "" == "$(php -m | grep igbinary)" ]; then
     # 安装 igbinary
     version="3.1.2"
@@ -32,7 +38,11 @@ if [ "" == "$(php -m | grep igbinary)" ]; then
     make install
 
     if [ "" == "$(php -m | grep igbinary)" ]; then
-        echo "extension=igbinary.so" >> $phpIniPath
+        if [ "" == "$phpdPath" ]; then
+            echo "extension=igbinary.so" >> $phpIniPath
+        else
+            echo "extension=igbinary.so" >> $phpdPath/10-igbinary.ini
+        fi
     fi
     cd ../
     rm -rf igbinary-$version
@@ -66,7 +76,11 @@ make -j
 make install
 
 if [ "" == "$(php -m | grep redis)" ]; then
-    echo "extension=redis.so" >> $phpIniPath
+    if [ "" == "$phpdPath" ]; then
+        echo "extension=redis.so" >> $phpIniPath
+    else
+        echo "extension=redis.so" >> $phpdPath/20-redis.ini
+    fi
 fi
 
 cd ../
