@@ -27,19 +27,14 @@ read -p "请选择:" PHP_VERSION
 
 if [[ "0" == $PHP_VERSION ]]; then
     cmdPHPVersion="php70-php"
-    rpmA
 elif [[ "1" == $PHP_VERSION ]]; then
     cmdPHPVersion="php71-php"
-    rpmA
 elif [[ "2" == $PHP_VERSION ]]; then
     cmdPHPVersion="php72-php"
-    rpmA
 elif [[ "3" == $PHP_VERSION ]]; then
     cmdPHPVersion="php73-php"
-    rpmB
 elif [[ "4" == $PHP_VERSION ]]; then
     cmdPHPVersion="php74-php"
-    rpmB
 else
     echo -e "\033[31m版本选择错误\033[0m"
     exit 1
