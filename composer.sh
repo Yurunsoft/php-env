@@ -47,7 +47,11 @@ fi
 
 # 测试
 echo -e "\033[32m测试:\033[0m"
-composer -V
+
+if !(composer -V); then
+    echo -e "\033[31mError: Composer 安装失败\033[0m"
+    exit 1
+fi
 
 # 镜像设置
 if [[ $chineseCDN = "1" ]]; then
