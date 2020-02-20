@@ -14,8 +14,8 @@ if [[ "" == $redhatRelease ]]; then
 fi
 
 if [[ "" == "$(rpm -qa|grep epel-release)" ]]; then
-
-yum install epel-release -y
+    yum install epel-release -y
+fi
 
 echo -e "\033[32m请选择 PHP 版本:\033[0m"
 echo -e "\033[32m0-7.0\033[0m"
