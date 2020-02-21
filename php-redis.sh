@@ -9,6 +9,20 @@ if [ "" != "$phpdPath" ]; then
     phpdPath=$(dirname $phpdPath)
 fi
 
+if !(type make >/dev/null 2>&1); then
+    # 安装 make
+    echo -e "\033[32m安装 make...\033[0m"
+    if (type apt >/dev/null 2>&1); then
+        apt update
+        apt install -y make
+    elif (type yum >/dev/null 2>&1); then
+        yum install -y make
+    else
+        echo -e "\033[31mError: 没有找到 apt / yum\033[0m"
+        exit 1
+    fi
+fi
+
 if [ "" == "$(php -m | grep igbinary)" ]; then
     # 安装 igbinary
     version="3.1.2"
