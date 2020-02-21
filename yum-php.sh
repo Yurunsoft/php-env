@@ -13,6 +13,11 @@ if [[ "" == $redhatRelease ]]; then
     exit 1
 fi
 
+# CentOS 8 必须启用 PowerTools
+if [[ "8" == $redhatRelease ]]; then
+    dnf config-manager --set-enabled PowerTools
+fi
+
 if [[ "" == "$(rpm -qa|grep epel-release)" ]]; then
     yum install epel-release -y
 fi
