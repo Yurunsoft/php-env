@@ -111,10 +111,15 @@ else
     exit 1
 fi
 
+swooleDir="swoole-src-${swooleVersion}"
+
+if [ -d "$swooleDir" ]; then
+    rm -rf swooleDir
+fi
+
 tar -xzf swoole.tar.gz
 rm swoole.tar.gz
 
-swooleDir="swoole-src-${swooleVersion}"
 if [ ! -d "$swooleDir" ]; then
     echo "\033[31mError: 下载或解压失败\033[0m"
     exit 1
