@@ -99,6 +99,17 @@ if !(type autoconf >/dev/null 2>&1); then
     fi
 fi
 
+# zlib
+if (type yum >/dev/null 2>&1); then
+    if [ "" == "$(yum list installed | grep zlib-devel)" ]; then
+        yum install -y zlib-devel
+    fi
+elif (type apt >/dev/null 2>&1); then
+    if [ "" == "$(apt list --installed | grep zlib1g-dev)" ]; then
+        apt install -y zlib1g-dev
+    fi
+fi
+
 downloadUrl="https://github.com/swoole/swoole-src/archive/v$swooleVersion.tar.gz"
 if (type wget >/dev/null 2>&1); then
     echo "\033[32m正在使用 wget 下载 Swoole v$swooleVersion...\033[0m"
