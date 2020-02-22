@@ -1,6 +1,13 @@
 #!/bin/bash
 # 安装 PHP Swoole 扩展
 
+function aptUpdate() {
+    if [ "" = "$aptUpdated" ]; then
+        aptUpdated=1
+        apt update
+    fi
+}
+
 __DIR__=$(cd `dirname $0`; pwd)
 
 phpIniPath=$(php -r "echo php_ini_loaded_file();")
@@ -41,7 +48,7 @@ if !(type make >/dev/null 2>&1); then
     # 安装 make
     echo -e "\033[32m安装 make...\033[0m"
     if (type apt >/dev/null 2>&1); then
-        apt update
+        aptUpdate
         apt install -y make
     elif (type yum >/dev/null 2>&1); then
         yum install -y make
@@ -61,7 +68,7 @@ if (type gcc >/dev/null 2>&1); then
     if version_lt $(gcc -dumpversion) "4.8"; then
         echo -e "\033[32m更新 gcc...\033[0m"
         if (type apt >/dev/null 2>&1); then
-            apt update
+            aptUpdate
             apt install -y gcc
         elif (type yum >/dev/null 2>&1); then
             yum install -y gcc
@@ -74,7 +81,7 @@ else
     # 安装 make
     echo -e "\033[32m安装 gcc...\033[0m"
     if (type apt >/dev/null 2>&1); then
-        apt update
+        aptUpdate
         apt install -y gcc
     elif (type yum >/dev/null 2>&1); then
         yum install -y gcc
@@ -89,7 +96,7 @@ if !(type autoconf >/dev/null 2>&1); then
     # 安装 autoconf
     echo -e "\033[32m安装 autoconf...\033[0m"
     if (type apt >/dev/null 2>&1); then
-        apt update
+        aptUpdate
         apt install -y autoconf
     elif (type yum >/dev/null 2>&1); then
         yum install -y autoconf
