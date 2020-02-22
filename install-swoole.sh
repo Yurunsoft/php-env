@@ -124,7 +124,7 @@ cd $swooleDir
 
 phpize
 
-./configure
+./configure --enable-openssl --enable-http2 --enable-mysqlnd
 
 if [[ $makeJ = "n" ]]; then
     make
