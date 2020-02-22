@@ -3,6 +3,14 @@
 
 __DIR__=$(cd `dirname $0`; pwd)
 
+phpIniPath=$(php -r "echo php_ini_loaded_file();")
+
+phpdPath=$(php -r "\$list = explode(',', php_ini_scanned_files());if(isset(\$list[0])){echo \$list[0];}")
+
+if [ "" != "$phpdPath" ]; then
+    phpdPath=$(dirname $phpdPath)
+fi
+
 if [ ! -f "$__DIR__/swoole-version.php" ]; then
     downloadUrl="https://gitee.com/yurunsoft/php-env/raw/master/swoole-version.php"
     if (type wget >/dev/null 2>&1); then
@@ -141,6 +149,6 @@ if [[ $keepSource = "n" ]]; then
 fi
 
 # 测试
-echo "\033[32m测试:\033[0m"
+echo -e "\033[32m测试:\033[0m"
 
 php --ri swoole
