@@ -132,3 +132,8 @@ cd ../
 if [[ $keepSource = "n" ]]; then
     rm -rf $swooleDir
 fi
+
+# 测试
+echo "\033[32m测试:\033[0m"
+
+php --ri swoole

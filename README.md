@@ -48,4 +48,10 @@
 
 快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/composer.sh && bash composer.sh`
 
+### `install-swoole.sh`
+
+一键安装 `Swoole` 扩展，兼容 Ubuntu、Debian、CentOS 等系统，全能一把梭。
+
+快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/install-swoole.sh && bash install-swoole.sh`
+
 > 更多脚本持续更新中……
