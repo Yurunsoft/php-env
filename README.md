@@ -18,6 +18,8 @@
 
 快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/apt-php.sh && bash apt-php.sh`
 
+视频教程：<https://www.bilibili.com/video/av89346440>
+
 ### `yum-php.sh`
 
 一键使用 `yum` 工具安装 `php`，适合 CentOS 等 RedHat 系，使用 yum 的 Linux 系统。
@@ -27,6 +29,8 @@
 自动安装了一些非常常用的 PHP 扩展。
 
 快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/yum-php.sh && bash yum-php.sh`
+
+视频教程：<https://www.bilibili.com/video/av90657235>
 
 ### `switch.sh`
 
@@ -53,5 +57,7 @@
 一键安装 `Swoole` 扩展，兼容 Ubuntu、Debian、CentOS 等系统，全能一把梭。
 
 快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/install-swoole.sh && bash install-swoole.sh`
+
+视频教程：<https://www.bilibili.com/video/av90802466>
 
 > 更多脚本持续更新中……
