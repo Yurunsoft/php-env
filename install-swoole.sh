@@ -22,6 +22,9 @@ php $__DIR__/swoole-version.php
 echo -e "\033[32m请输入您想要安装的版本（不用带v开头）：\033[0m"
 read -p "" swooleVersion
 
+echo -e "\033[32m是否启用多核编译，低配机器请选否？(y/n):\033[0m"
+read -p "" makeJ
+
 echo -e "\033[32m安装完成后是否保留源代码？(y/n):\033[0m"
 read -p "" keepSource
 
@@ -115,7 +118,11 @@ phpize
 
 ./configure
 
-make -j
+if [[ $makeJ = "n" ]]; then
+    make
+else
+    make -j
+fi
 
 make install
 
