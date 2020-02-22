@@ -114,7 +114,7 @@ fi
 swooleDir="swoole-src-${swooleVersion}"
 
 if [ -d "$swooleDir" ]; then
-    rm -rf swooleDir
+    rm -rf $swooleDir
 fi
 
 tar -xzf swoole.tar.gz
