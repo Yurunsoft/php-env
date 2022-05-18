@@ -16,7 +16,7 @@
 
 自动安装了一些非常常用的 PHP 扩展。
 
-快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/apt-php.sh && bash apt-php.sh`
+快速安装：`wget https://github.com/yurunsoft/php-env/blob/master/apt-php.sh && bash apt-php.sh`
 
 视频教程：<https://www.bilibili.com/video/av89346440>
 
@@ -28,7 +28,7 @@
 
 自动安装了一些非常常用的 PHP 扩展。
 
-快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/yum-php.sh && bash yum-php.sh`
+快速安装：`wget https://github.com/yurunsoft/php-env/blob/master/yum-php.sh && bash yum-php.sh`
 
 视频教程：<https://www.bilibili.com/video/av90657235>
 
@@ -36,13 +36,13 @@
 
 切换系统内已安装的 PHP 版本
 
-快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/switch.sh && bash switch.sh`
+快速安装：`wget https://github.com/yurunsoft/php-env/blob/master/switch.sh && bash switch.sh`
 
 ### `php-redis.sh`
 
 一键安装 `Redis` 扩展，自动启用 `igbinary`，支持序列化。
 
-快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/php-redis.sh && bash php-redis.sh`
+快速安装：`wget https://github.com/yurunsoft/php-env/blob/master/php-redis.sh && bash php-redis.sh`
 
 ### `composer.sh`
 
@@ -50,13 +50,13 @@
 * 一键配置国内镜像（阿里云、腾讯云、华为云、cnpkg）
 * 一键安装 Composer 多线程加速下载包
 
-快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/composer.sh && bash composer.sh`
+快速安装：`wget https://github.com/yurunsoft/php-env/blob/master/composer.sh && bash composer.sh`
 
 ### `install-swoole.sh`
 
 一键安装 `Swoole` 扩展，兼容 Ubuntu、Debian、CentOS 等系统，全能一把梭。
 
-快速安装：`wget https://gitee.com/yurunsoft/php-env/raw/master/install-swoole.sh && bash install-swoole.sh`
+快速安装：`wget https://github.com/yurunsoft/php-env/blob/master/install-swoole.sh && bash install-swoole.sh`
 
 视频教程：<https://www.bilibili.com/video/av90802466>
 

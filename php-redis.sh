@@ -25,7 +25,7 @@ fi
 
 if [ "" == "$(php -m | grep igbinary)" ]; then
     # 安装 igbinary
-    version="3.1.2"
+    version="3.1.4"
     downloadUrl="https://github.com/igbinary/igbinary/archive/$version.tar.gz"
     if (type wget >/dev/null 2>&1); then
         echo -e "\033[32m正在使用 wget 下载 igbinary...\033[0m"
@@ -62,7 +62,7 @@ if [ "" == "$(php -m | grep igbinary)" ]; then
     rm -rf igbinary-$version
 fi
 
-version="5.1.1"
+version="5.3.1"
 downloadUrl="https://github.com/phpredis/phpredis/archive/$version.tar.gz"
 
 if (type wget >/dev/null 2>&1); then

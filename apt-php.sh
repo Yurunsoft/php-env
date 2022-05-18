@@ -29,7 +29,7 @@ else
     exit 1
 fi
 
-if !(type add-apt-repository2 >/dev/null 2>&1); then
+if !(type add-apt-repository >/dev/null 2>&1); then
     # 安装 add-apt-repository
     echo -e "\033[32m安装 add-apt-repository...\033[0m"
     apt update
@@ -40,7 +40,7 @@ fi
 echo -e "\033[32m安装第三方源...\033[0m"
 add-apt-repository "https://launchpad.proxy.ustclug.org/ondrej/php/ubuntu" -y -u > /dev/null 2> /tmp/apt_add_key.txt    
 key=`cat /tmp/apt_add_key.txt | awk -F ":" '{print $6}'  | awk '{print $2}'`
-if [ "" != $key ]; then
+if [[ "" != $key ]]; then
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv $key
     apt update
 fi
