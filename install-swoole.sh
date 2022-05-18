@@ -19,7 +19,7 @@ if [ "" != "$phpdPath" ]; then
 fi
 
 if [ ! -f "$__DIR__/swoole-version.php" ]; then
-    downloadUrl="https://github.com/yurunsoft/php-env/blob/master/swoole-version.php"
+    downloadUrl="https://github.com/yurunsoft/php-env/raw/master/swoole-version.php"
     if (type wget >/dev/null 2>&1); then
         echo -e "\033[32m正在使用 wget 下载 swoole-version.php...\033[0m"
         wget -O swoole-version.php $downloadUrl
